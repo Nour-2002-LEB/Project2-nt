@@ -1038,6 +1038,26 @@ nav a:hover::after{
         font-size: 19px;
     }
 }
+@media (max-width: 380px) {
+  .container { padding: 0 16px; }
+  header { padding: 14px 16px; }
+  .hero { padding: clamp(80px, 10vw, 140px) 16px clamp(60px, 8vw, 100px); }
+  .hero-title { font-size: clamp(40px, 14vw, 56px); }
+  .section-title { font-size: clamp(28px, 9vw, 36px); }
+  .hero-stats { gap: 18px; }
+  .stat-num { font-size: 26px; }
+  .stat-label { font-size: 10px; }
+  .gallery-overlay { padding: 16px; }
+  .gallery-overlay h3 { font-size: 17px; }
+}
+
+/* ---- Landscape phone (short height) ---- */
+@media (max-width: 820px) and (max-height: 500px) and (orientation: landscape) {
+  .hero { min-height: auto; padding-top: 80px; padding-bottom: 50px; }
+  .hero-image-wrap { max-height: 50vh; }
+  .hero-cta { margin-bottom: 28px; }
+  .hero-stats { margin-bottom: 0; }
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
